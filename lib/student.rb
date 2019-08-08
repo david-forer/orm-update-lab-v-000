@@ -10,9 +10,7 @@ class Student
     @grade = grade
   end
 
-end
-
- def self.create_table
+  def self.create_table
     sql = <<-SQL
     CREATE TABLE IF NOT EXISTS students(
     id INTEGER PRMARY KEY,
@@ -21,3 +19,7 @@ end
     SQL
     DB[:conn].execute(sql)
   end
+  
+  
+  
+end
